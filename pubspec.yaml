@@ -1,0 +1,106 @@
+name: flutter_template
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+
+dependencies:
+  fast_i18n: ^5.12.6
+  flutter:
+    sdk: flutter
+
+  # state management
+  get: ^4.6.6
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
+  equatable: ^2.0.3
+  provider: ^6.0.2
+
+  # networking
+  dio: ^4.0.6
+
+  # local cache
+  hive: ^2.1.0
+  hive_flutter: ^1.1.0
+
+  # utils
+  cupertino_icons: ^1.0.2
+  intl: ^0.17.0
+  url_launcher: ^6.1.2
+  shimmer: ^2.0.0
+  flutter_dotenv: ^5.0.2
+  cached_network_image: ^3.2.1
+  # flutter_html: ^3.0.0-beta.2
+  # webview_flutter: ^4.4.1
+  carousel_slider: ^4.2.1
+  class_generator: ^2.0.1
+  web_socket_channel: ^2.4.0
+  # webview_flutter_wkwebview: ^3.9.0
+  # webview_flutter_android: ^3.12.0
+  # desktop_webview_window: ^0.2.3
+  flutter_screenutil: ^5.9.0
+  esc_pos_printer: ^4.1.0
+  tiengviet: ^1.0.0
+  settings_ui: ^2.0.2
+  device_info_plus: ^9.1.1
+  mask_text_input_formatter: ^2.7.0
+  expandable_bottom_bar: ^2.0.2
+  talker: ^3.2.0
+  material_dialogs: ^1.1.4
+  # esc_pos_utils_plus: ^2.0.1+6
+  screenshot: ^2.1.0
+  image: ^3.3.0
+  permission_handler: ^11.0.1
+  connectivity: ^3.0.6
+  connectivity_plus: ^2.3.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+  # cache adapter
+  hive_generator: ^1.1.2
+  build_runner: ^2.1.10
+
+flutter:
+  uses-material-design: true
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - .env
+    - assets/icons/
+    - assets/images/
+    - assets/images/banners/
+    - assets/images/products/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: DeterminationSans
+      fonts:
+        - asset: fonts/SVN-DeterminationSans.otf
+    - family: Nunito
+      fonts:
+        - asset: fonts/Nunito-Regular.ttf
+        - asset: fonts/Nunito-Medium.ttf
+          weight: 600
+        - asset: fonts/Nunito-Light.ttf
+          weight: 200
+        - asset: fonts/Nunito-Bold.ttf
+          weight: 900
+        - asset: fonts/Nunito-Italic.ttf
+        - asset: fonts/Nunito-SemiBold.ttf
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

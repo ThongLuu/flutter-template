@@ -1,0 +1,11 @@
+{
+  "shipping_method": {
+    "onBoard": "Ăn tại chỗ", 
+    "shipping": "Mua mang đi" 
+  },
+  "button_order": {
+    "add_order": "Thêm Đơn Hàng",
+    "cancel_order": "Hủy Đơn Hàng",
+    "complete_order": "Hoàn Tất,"
+  }
+}
