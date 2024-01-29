@@ -1,6 +1,9 @@
 import 'dart:io';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter_template/cubits/user/cubit.dart';
+import 'package:flutter_template/providers/user_provider.dart';
+import 'package:flutter_template/screens/login_screen/login_screen.dart';
 import 'package:flutter_template/utils/logging/logger.dart';
 
 import '/cubits/product/cubit.dart';
@@ -61,6 +64,8 @@ void main() async {
   await Hive.openBox('storeId');
   await Hive.openBox('menu');
   await Hive.openBox('cart');
+  await Hive.openBox('userBox');
+  await Hive.openBox('user');
 
   String deviceId = await deviceInfo();
 
@@ -86,8 +91,10 @@ class MyApp extends StatelessWidget {
           // BlocProvider(create: (_) => ArticlesCubit()),
           BlocProvider(create: (_) => StoresCubit()),
           BlocProvider(create: (_) => ProductCubit()),
+          BlocProvider(create: (_) => UserCubit()),
           // BlocProvider(create: (_) => TopHeadlinesCubit()),
           ChangeNotifierProvider(create: (_) => StoreProvider()),
+          ChangeNotifierProvider(create: (_) => UserProvider()),
           ChangeNotifierProvider(create: (_) => TabProvider()),
           ChangeNotifierProvider(create: (_) => ThemeProvider()),
           // ChangeNotifierProvider(create: (_) => CategoryProvider()),
@@ -139,8 +146,9 @@ class MaterialChild extends StatelessWidget {
                             provider.isDark ? ThemeMode.dark : ThemeMode.light,
                         theme: theme.themeLight,
                         darkTheme: theme.themeDark,
-                        initialRoute: '/splash',
+                        initialRoute: '/login',
                         routes: {
+                          '/login': (context) => const LoginScreen(),
                           '/splash': (context) => const SplashScreen(),
                           '/home': (context) => const HomeScreen(),
                         },
